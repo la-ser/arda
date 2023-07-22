@@ -1,0 +1,61 @@
+#corner {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: brown;
+  padding: 10px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  text-align: right;
+  color: transparent;
+  height: 50px;
+  animation: cornerDiv 0.7s backwards;
+  text-decoration: none;
+}
+
+#corner:hover {
+  width: 200px;
+  animation: cornerDiv 1s ease-in-out;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@keyframes cornerDiv {
+  0% {
+    width: 200px;
+    transform: rotate(0deg);
+    color: transparent;
+    border-top-left-radius: 0px;
+  }
+  20% {
+    transform: rotate(-2deg);
+    color: transparent;
+    border-top-left-radius: 3px;
+  }
+  40% {
+    background-color: rgb(192, 39, 39);
+    color: transparent;
+    border-top-left-radius: 5px;
+  }
+  60% {
+    transform: rotate(-5deg);
+    color: transparent;
+    border-top-left-radius: 20px;
+  }
+  80% {
+    transform: rotate(2deg);
+    color: transparent;
+    border-top-left-radius: 15px;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,22 +1,38 @@
-  // Den Button mit der ID "button" abrufen
-  const button = document.getElementById("button");
-    
-  // Eine Variable namens "score" definieren, die den aktuellen Punktestand speichert
-  let score = 0;
-  
-  // Ein Klick-Ereignis dem Button hinzufügen
-  button.addEventListener("click", () => {
-    // Den Punktestand um 1 erhöhen
-    score++ ;
-    
-    // Den aktualisierten Punktestand in das HTML-Element mit der ID "score" schreiben
-    document.getElementById("score").innerHTML = `Punktestand: ${score}`;
+const button = document.getElementById("click");
 
-    if (score > 24 ) {
-        score = 0;
-        button.innerHTML = "Nochmal spielen"
-    } 
-    if (score > 0 ){
-        button.innerHTML = "Klicken!"
-    }
-  });
+let score = 0;
+
+let maxScore = 5;
+
+let timeStarted;
+let timeStopped;
+
+button.addEventListener("click", () => {
+  if (score >= maxScore) return;
+
+  if (score == 0) {
+    timeStarted = new Date().getTime();
+  }
+
+  score++;
+
+  document.getElementById("score").innerHTML = `Punktestand: ${score}`;
+
+  if (score == maxScore) {
+    timeStopped = new Date().getTime();
+    let timeNeeded = timeStopped - timeStarted;
+    timeNeeded = (timeNeeded / 1000).toFixed(2);
+
+    button.innerHTML = "Startet neu...";
+    setTimeout(delayedFunction, 3000);
+    document.getElementById("score").innerHTML = `Punkte: ${score} | ${timeNeeded}`;
+  }
+  if (maxScore > score > 0) {
+    button.innerHTML = "Klicken!";
+  }
+});
+
+function delayedFunction() {
+  score = 0;
+  document.getElementById("score").innerHTML = `Punktestand: ${score}`;
+}
