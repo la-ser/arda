@@ -2,7 +2,7 @@ const button = document.getElementById("click");
 
 let score = 0;
 
-let maxScore = 5;
+let maxScore = 25;
 
 let timeStarted;
 let timeStopped;
