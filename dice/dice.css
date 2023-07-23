@@ -6,6 +6,14 @@
   --text-color: rgba(57, 172, 63, 0.7);
 }
 
+html {
+  overflow: hidden;
+}
+
+* {
+  outline: none;
+}
+
 body {
   background: linear-gradient(to bottom, rgb(31, 31, 31), rgb(0, 71, 0)) no-repeat;
   overflow: hidden;

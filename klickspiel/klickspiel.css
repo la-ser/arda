@@ -6,6 +6,14 @@
   --text-color: rgba(57, 145, 172, 0.7);
 }
 
+html {
+  overflow: hidden;
+}
+
+* {
+  outline: none;
+}
+
 body {
   height: 100vh;
   padding: 0;
