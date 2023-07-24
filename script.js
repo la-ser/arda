@@ -126,6 +126,7 @@ fetch(PRODUCTS_FILE_PATH)
   .catch((error) => console.error(error));
 
 /*BG*/
+/*
 const body = document.body;
 const imageElements = document.querySelectorAll(".hover-img");
 let currentImage = null;
@@ -159,3 +160,4 @@ imageElements.forEach(function (element) {
     }
   });
 });
+*/
